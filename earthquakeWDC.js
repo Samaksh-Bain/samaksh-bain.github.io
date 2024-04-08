@@ -6,7 +6,7 @@
             id: "ResponseId",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "Start Date",
+            id: "StartDate",
             alias: "magnitude",
             dataType: tableau.dataTypeEnum.float
         }];
@@ -62,7 +62,7 @@
             for (var i = 0, len = responses.length; i < len; i++) {
                 tableData.push({
                     "ResponseId": responses[i].responseId,
-                    "Start Date": responses[i].values.startDate,
+                    "StartDate": responses[i].values.startDate,
                 
                 });
             }
