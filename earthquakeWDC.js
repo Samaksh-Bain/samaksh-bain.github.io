@@ -32,7 +32,7 @@
         var progressId="progressId";
         var counter=0;
         // Define the URL for the Qualtrics API endpoint
-        var apiUrl = `https://bain.eu.qualtrics.com/API/v3/surveys/SV_6XuIqPwIklNF3JY/export-responses/918268e9-4b4c-46b7-aab1-66b65f962747-def/file`;
+        var apiUrl = `https://bain.eu.qualtrics.com/API/v3/surveys/SV_56xZCpMsN1jU7vU/export-responses/2ffd6337-609c-4c4f-a321-abbe25f72b06-def/file`;
         
         // Define headers for the API request
         var headers = {
