@@ -1,21 +1,14 @@
 (function () {
     var myConnector = tableau.makeConnector();
-    
+
     myConnector.getSchema = function (schemaCallback) {
         var cols = [{
-            id: "id",
+            id: "ResponseId",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "mag",
+            id: "Start Date",
             alias: "magnitude",
             dataType: tableau.dataTypeEnum.float
-        }, {
-            id: "title",
-            alias: "title",
-            dataType: tableau.dataTypeEnum.string
-        }, {
-            id: "location",
-            dataType: tableau.dataTypeEnum.geometry
         }];
     
         var tableSchema = {
@@ -33,7 +26,8 @@
         const url = new URL(window.location.href);
         //const qualtricsApiToken = 'BqhXyfBNMlb1C4vAvIgUQRqAvqq1ok7Tiz6Ey8jL';
         const qualtricsApiToken = url.searchParams.get('token');
-        const surveyId = 'SV_6XuIqPwIklNF3JY';
+        //const surveyId = 'SV_6XuIqPwIklNF3JY';
+        const surveyId = url.searchParams.get('surveyId');
         var progressStatus='In progress';
         var progressId="progressId";
         var counter=0;
@@ -67,10 +61,9 @@
 
             for (var i = 0, len = responses.length; i < len; i++) {
                 tableData.push({
-                    "id": responses[i].responseId,
-                    "mag": responses[i].values.startDate,
-                    "title": responses[i].values.recordedDate,
-                    "location": "NA"
+                    "ResponseId": responses[i].responseId,
+                    "Start Date": responses[i].values.startDate,
+                
                 });
             }
     
