@@ -36,7 +36,7 @@
           .then(data => {
             // Handle the response data
             console.log('Exported response data:', data);
-           /*  var responses = data.responses;
+             var responses = data.responses;
             tableData=[];
 
             for (var i = 0, len = responses.length; i < len; i++) {
@@ -48,9 +48,9 @@
                 });
             }
     
-            table.appendRows(tableData); */
-            //doneCallback();
-            return data;
+            table.appendRows(tableData); 
+            doneCallback();
+           // return data;
            
           })
           .catch(error => {
