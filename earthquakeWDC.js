@@ -8,7 +8,7 @@
         }, {
             id: "StartDate",
             alias: "magnitude",
-            dataType: tableau.dataTypeEnum.float
+            dataType: tableau.dataTypeEnum.string
         }];
     
         var tableSchema = {
