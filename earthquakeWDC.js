@@ -6,10 +6,25 @@
             id: "ResponseId",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "Date",
-            alias: "date",
+            id: "StartDate",
+            alias: "startdate",
             dataType: tableau.dataTypeEnum.string
-        }];
+        },
+        {
+          id: "EndDate",
+          alias: "Enddate",
+          dataType: tableau.dataTypeEnum.string
+      },
+      {
+        id: "Email",
+        alias: "Email",
+        dataType: tableau.dataTypeEnum.string
+    },
+  {
+    id:'QID578',
+    alias:'QID578',
+    dataType: tableau.dataTypeEnum.string
+  }];
     
         var tableSchema = {
             id: "Surveyfeed",
@@ -50,7 +65,11 @@
           for (var i = 0, len = responses.length; i < len; i++) {
               tableData.push({
                   "ResponseId": responses[i].responseId,
-                  "Date": responses[i].values.startDate,
+                  "StartDate": responses[i].values.startDate,
+                  "EndDate":responses[i].values.endDate,
+                  "Email":responses[i].values.QID591_TEXT,
+                  "QID578":responses[i].displayedValues.QID578
+
               
               });
           }
